@@ -1,0 +1,60 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* FINE RESET */
+
+/* MAIN */
+main {
+  width: 70%;
+  margin: 20px auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+section {
+  width: 46%;
+  height: 200px;
+  overflow: auto;
+  margin: 20px 2%;
+  padding: 20px;
+  border: 3px solid darkblue;
+  float: left;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.input,
+.bottone {
+  display: inline-block;
+}
+
+input,
+button {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#lista-cognomi li {
+  text-transform: capitalize;
+}
+
+/* Errore */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+/* Fine Errore */
+
+/* END MAIN */
