@@ -1,6 +1,7 @@
 // INPUT
 var cognome = document.getElementById('cognome');
 var errore = document.getElementById('errore');
+var posizione = document.getElementById('posizione');
 var listaPresenti = ['Bianchi', 'Rossi', 'Duzioni', 'Balsano', 'Verdi'];
 // Riordino l'array
 listaPresenti.sort(
@@ -8,7 +9,6 @@ listaPresenti.sort(
     return a.toLowerCase().localeCompare(b.toLowerCase());
   }
 );
-var nuoviArrivati = [];
 
 // BOTTONI
 var aggiungi = document.getElementById('aggiungi');
@@ -16,6 +16,7 @@ var togli = document.getElementById('togli');
 
 // OUTPUT
 var listaCognomi = document.getElementById('lista-cognomi');
+var nuoviArrivati = [];
 
 // Inserisco nella lista vuota gli elementi già presenti nel mio array
 for (var i = 0; i < listaPresenti.length; i++) {
@@ -55,6 +56,11 @@ aggiungi.addEventListener('click',
     } else {
       errore.className = 'visible'
     }
+
+    // Calcolo la posizione del cognome inserito e lo stampo a schermo
+    var numPosizione = (listaPresenti.indexOf(cognomeInserito) + 1);
+    posizione.innerHTML = 'La posizione del tuo cognome nella lista è ' + numPosizione;
+    posizione.className = 'visible'
   }
 )
 
@@ -65,5 +71,6 @@ togli.addEventListener('click',
     // Reset campi
     cognome.value = '';
     errore.className = 'hidden';
+    posizione.className = 'hidden';
   }
 )
